@@ -1,0 +1,22 @@
+{
+    "name": "haleyleozhang/php_libary",
+    "description": "云天河的php通用工具库",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+    {
+        "name": "haleyleozhang",
+        "email": "hlzblog@vip.qq.com"
+    }],
+    "require":
+    {
+        "php": ">=7.0"
+    },
+    "autoload":
+    {
+        "psr-4":
+        {
+            "HaleyLeoZhang\\": "src/HaleyLeoZhang"
+        }
+    }
+}
