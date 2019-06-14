@@ -8,7 +8,7 @@ namespace HaleyLeoZhang\Tool;
 // GITHUB: https://github.com/HaleyLeoZhang
 // ----------------------------------------------------------------------
 
-require_once __DIR__ . '/../Libs' . '/HTMLPurifier/HTMLPurifier.auto.php';
+require_once __DIR__ . '/Libs' . '/HTMLPurifier/HTMLPurifier.auto.php';
 
 class Filter
 {

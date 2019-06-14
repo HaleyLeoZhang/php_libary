@@ -9,7 +9,7 @@ namespace HaleyLeoZhang\Tool;
 // ----------------------------------------------------------------------
 
 // 引入自动加载函数
-require_once __DIR__ . '/../Libs' . '/Smtp/PHPMailerAutoload.auto.php';
+require_once __DIR__ . '/Libs' . '/Smtp/PHPMailerAutoload.auto.php';
 
 class Smtp
 {
