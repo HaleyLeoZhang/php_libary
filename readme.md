@@ -5,7 +5,7 @@
 
 目录如下  
 
-
+    .
     ├── composer.json
     ├── readme.md
     ├── src
@@ -19,6 +19,26 @@
     │       │   ├── ExpectValue.php
     │       │   ├── Location.php
     │       │   └── Token.php
+    │       ├── Laravel
+    │       │   ├── Caches
+    │       │   │   ├── BaseCache.php
+    │       │   │   └── CacheExample
+    │       │   ├── Crypt
+    │       │   │   ├── BaseCrypt.php
+    │       │   │   └── RsaCrypt.php
+    │       │   ├── Helpers
+    │       │   │   └── DistributedLock.php
+    │       │   ├── Jobs
+    │       │   │   ├── EmailJob.php
+    │       │   │   └── Job.php
+    │       │   ├── Libs
+    │       │   │   ├── HTMLPurifier
+    │       │   │   └── Smtp
+    │       │   └── Tool
+    │       │       ├── Export.php
+    │       │       ├── Filter.php
+    │       │       ├── Log.php
+    │       │       └── Smtp.php
     │       ├── OAuth2
     │       │   ├── BaseOAuth2.php
     │       │   ├── Github
@@ -39,5 +59,6 @@
     │           └── TuringRobotApi.php
     ├── tests
     │   └── test_upload.php
+
 
 各个部分 使用方法，请稍候
