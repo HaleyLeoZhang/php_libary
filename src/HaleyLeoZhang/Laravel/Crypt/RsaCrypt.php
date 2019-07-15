@@ -65,7 +65,7 @@ class RsaCrypt implements BaseCrypt
             'private',
         ];
         if (!in_array($key_type, $key_type_list)) {
-            throw new \ApiException("获取RSA密钥类型错误：public、private");
+            throw new \Exception("获取RSA密钥类型错误：public、private");
         }
 
         $file_variable = 'rsa_file_' . $key_type;

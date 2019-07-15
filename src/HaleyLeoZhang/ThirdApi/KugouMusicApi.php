@@ -19,8 +19,8 @@ class KugouMusicApi
      * @param String : API_PALY_URL  查询播放地址
      * @param Int    : TIMER         设置超时时间，单位，秒
      */
-    const API_SEARCH   = 'http://songsearch.kugou.com/song_search_v2';
-    const API_PALY_URL = 'http://www.kugou.com/yy/index.php';
+    const API_SEARCH   = 'https://songsearch.kugou.com/song_search_v2';
+    const API_PALY_URL = 'https://wwwapi.kugou.com/yy/index.php';
     const TIMER        = 15;
 
     // 必要 - 模拟头部信息
@@ -116,6 +116,7 @@ class KugouMusicApi
         $params         = [];
         $params['r']    = 'play/getdata';
         $params['hash'] = $file_hash;
+        $params['mid']  = '1a7886f1e525b05f874a7663365a0daa'; // 这个值目前我不知道它的有效期是多长
 
         $reqest_url = self::API_PALY_URL . '?' . http_build_query($params);
 
