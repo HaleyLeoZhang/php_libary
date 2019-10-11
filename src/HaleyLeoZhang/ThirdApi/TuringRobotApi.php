@@ -43,11 +43,21 @@ class TuringRobotApi
     public static function get_instance()
     {
         if (!self::$_this) {
-            self::$_this              = new self();
-            self::$_this->private_key = env('TURNING_PRIVATE_KEY', '');
+            self::$_this = new self();
             CurlRequest::set_timeout_second(self::TIMER);
         }
         return self::$_this;
+    }
+
+    /**
+     * 设置用户对话唯一识别码
+     * @param string $token 一句话
+     * @return self
+     */
+    public function set_private_key($private_key)
+    {
+        $this->private_key = $private_key;
+        return $this;
     }
 
     /**

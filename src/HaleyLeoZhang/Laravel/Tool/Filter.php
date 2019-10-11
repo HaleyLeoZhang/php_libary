@@ -1,5 +1,5 @@
 <?php
-namespace HaleyLeoZhang\Tool;
+namespace HaleyLeoZhang\Laravel\Tool;
 
 // ----------------------------------------------------------------------
 // 数据过滤相关

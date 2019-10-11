@@ -18,9 +18,8 @@ class CurlRequest
 
     /**
      * POST或GET请求，并返回数据
-     * @param  String      url     访问地址
-     * @param  Array|JSON  data    用于POST的数据
-     * @param  Array       header  HTTP头请求
+     * - 入参见 handle 函数
+     * - 入参见 handle 函数
      * @return String  返回数据
      */
     public static function run($url, $data = null, $header = null)
@@ -30,11 +29,9 @@ class CurlRequest
     }
 
     /**
-     * POST或GET请求，并返回数据 - 附带状态码
-     * @param  String      url     访问地址
-     * @param  Array|JSON  data    用于POST的数据
-     * @param  Array       header  HTTP头请求
-     * @return array  返回数据 content 、 状态码 http_code
+     * POST或GET请求，并返回数据附带状态码
+     * - 入参见 handle 函数
+     * @return Array  返回数据+附带状态码
      */
     public static function run_with_status($url, $data = null, $header = null)
     {
@@ -43,9 +40,11 @@ class CurlRequest
 
     /**
      * POST或GET请求，并返回数据
-     * @param  String      url     访问地址
-     * @param  Array|JSON  data    用于POST的数据
-     * @param  Array       header  HTTP头请求
+     * @param  String  url  访问地址
+     * @param  Array|String  data  用于POST的数据
+     * - Array form-data形式请求
+     * - String form表单请求,http_build_query($data)
+     * @param  Array  header  HTTP头请求
      * @return array  返回数据、状态码
      */
     protected static function handle($url, $data, $header)
@@ -97,21 +96,14 @@ class CurlRequest
     }
 }
 
-// // 示例爬取 酷狗音乐，'刚好遇见你' 的链接地址
-
-// // 对应音乐的fileHash
-
-// $fileHash = '1BA52AFC430A1D0EBF9C7271BD71E6B9';
-// $url      = 'http://www.kugou.com/yy/index.php?r=play/getdata&hash=' . $fileHash;
-// $header   = [
-//     "Accept:application/json, text/javascript",
-//     "Connection:keep-alive",
-//     "Host:www.kugou.com",
-//     "Referer:http://www.kugou.com/song/",
-//     "User-Agent:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0",
-//     "X-Requested-With:XMLHttpRequest",
+// - 示例 form 表单 请求
+// $header = [
 // ];
-// $d          = CurlRequest::run($url, null, $header);
-// $d          = json_decode($d, true);
-// $msg['url'] = $d['data']['play_url'];
-// exit(json_encode($msg));
+// $data = [];
+// $data['id'] = 1;
+
+// $api = 'http://test.com/delete';
+// // 发出请求
+// $content  = CurlRequest::run($api,http_build_query($data), $header);
+// echo $content;
+// exit();

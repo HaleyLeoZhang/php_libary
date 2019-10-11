@@ -51,7 +51,7 @@ class Location
             return $ip;
         } else {
             $sub_ip = explode(".", $ip, 3); // 以 . 为界限差分为3个字符串
-            array_pop($sub_ip); //去掉最后一个字符串
+            array_pop($sub_ip); // 去掉最后一个字符串
             $sub_ip = implode(".", $sub_ip);
             return [
                 "real_ip" => $ip,

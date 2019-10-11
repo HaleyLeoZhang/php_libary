@@ -1,10 +1,3 @@
-## 简介
-
-这是云天河多年来整理来的通用工具库  
-下面是一些示例使用方法[完整测试代码在 `tests/test_file.php` 中]  
-其中 `Larvarl` 目录,只针对这一款框架使用,已齐全注释,如需使用,请自行查看  
-
-~~~php
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -184,4 +177,3 @@ class App
 }
 $app = new App();
 $app->run();
-~~~

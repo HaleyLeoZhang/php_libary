@@ -1,5 +1,4 @@
 <?php
-
 namespace HaleyLeoZhang\Helpers;
 
 // -------------------------------------------------------------
@@ -24,7 +23,7 @@ class ExpectValue
      * @return string
      * - 预期值
      */
-    public static function compute(&$sample_arr)
+    public static function compute($sample_arr)
     {
         $ins     = new self();
         $avg_x   = $ins->get_avg_x($sample_arr);

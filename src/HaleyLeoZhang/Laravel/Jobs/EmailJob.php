@@ -9,7 +9,7 @@ namespace HaleyLeoZhang\Laravel\Jobs;
 // GITHUB: https://github.com/HaleyLeoZhang
 // ----------------------------------------------------------------------
 
-use HaleyLeoZhang\Tool\Smtp;
+use HaleyLeoZhang\LaravelTool\Smtp;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Queue\InteractsWithQueue;

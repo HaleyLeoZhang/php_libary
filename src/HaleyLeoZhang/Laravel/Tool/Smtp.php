@@ -1,5 +1,5 @@
 <?php
-namespace HaleyLeoZhang\Tool;
+namespace HaleyLeoZhang\Laravel\Tool;
 
 // ----------------------------------------------------------------------
 // 发送邮件

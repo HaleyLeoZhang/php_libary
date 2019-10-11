@@ -28,14 +28,13 @@ class ApiService
      */
     public function get_token()
     {
-        $params                  = [];
-        $params['appid']     = $this->app_id;
-        $params['secret'] = $this->app_key;
-        $params['code']          = $this->code;
-        $params['grant_type']  = 'authorization_code';
+        $params               = [];
+        $params['appid']      = $this->app_id;
+        $params['secret']     = $this->app_key;
+        $params['code']       = $this->code;
+        $params['grant_type'] = 'authorization_code';
 
         $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?' . http_build_query($params);
-
 
         $get['appid']      = env('wechat_appid');
         $get['secret']     = env('wechat_appkey');
@@ -61,22 +60,22 @@ class ApiService
     public function user_info($params)
     {
         extract($params);
-        $params                       = [];
-        $params['access_token']   = $access_token;
+        $params                 = [];
+        $params['access_token'] = $access_token;
         $params['openid']       = $openid;
-        $params['lang']       = 'zh_CN ';
-        $url     = 'https://api.weixin.qq.com/sns/userinfo?' . http_build_query($params);
-        $content = CurlRequest::run($url);
+        $params['lang']         = 'zh_CN ';
+        $url                    = 'https://api.weixin.qq.com/sns/userinfo?' . http_build_query($params);
+        $content                = CurlRequest::run($url);
         // - 示例 $content 字符串
         // {
-        //     "subscribe": 1, 
-        //     "openid": "o6_bmjrPTlm6_2sgVt7hMZOPfL2M", 
-        //     "nickname": "Band", 
-        //     "sex": 1, 
-        //     "language": "zh_CN", 
-        //     "city": "广州", 
-        //     "province": "广东", 
-        //     "country": "中国", 
+        //     "subscribe": 1,
+        //     "openid": "o6_bmjrPTlm6_2sgVt7hMZOPfL2M",
+        //     "nickname": "Band",
+        //     "sex": 1,
+        //     "language": "zh_CN",
+        //     "city": "广州",
+        //     "province": "广东",
+        //     "country": "中国",
         //     "headimgurl":"http://thirdwx.qlogo.cn/mmopen/g3MonUZtNHkdmzicIlibx6iaFqAc56vxLSUfpb6n5WKSYVY0ChQKkiaJSgQ1dZuTOgvLLrhJbERQQ4eMsv84eavHiaiceqxibJxCfHe/0",
         //     "subscribe_time": 1382694957,
         //     "unionid": " o6_bmasdasdsad6_2sgVt7hMZOPfL"
