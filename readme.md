@@ -10,11 +10,10 @@
 composer require haleyleozhang/php_libary
 ~~~
 
-## 部分示例
+## 示例使用
 
 ~~~php
 <?php
-require __DIR__ . '/../vendor/autoload.php';
 
 use HaleyLeoZhang\Helpers\ArrayHelper;
 use HaleyLeoZhang\Helpers\CurlRequest;
